@@ -97,6 +97,11 @@ namespace WpfChatApp
 		{
 			if (proxy.State == CommunicationState.Opened)
 			{
+				if (this.isConnected)
+				{
+					proxy.Disconnect(this.Nickname);
+				}
+
 				proxy.Close();
 			}
 		}
@@ -123,7 +128,7 @@ namespace WpfChatApp
 
 			try
 			{
-				this.isConnected = await this.proxy.ConnectAsync();
+				this.isConnected = await this.proxy.ConnectAsync(this.Nickname);
 
 				if (this.isConnected)
 				{

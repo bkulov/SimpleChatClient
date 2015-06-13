@@ -95,16 +95,16 @@ namespace WpfChatApp.ChatServices {
     public interface IChatService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatService/Connect", ReplyAction="http://tempuri.org/IChatService/ConnectResponse")]
-        bool Connect();
+        bool Connect(string nickname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatService/Connect", ReplyAction="http://tempuri.org/IChatService/ConnectResponse")]
-        System.Threading.Tasks.Task<bool> ConnectAsync();
+        System.Threading.Tasks.Task<bool> ConnectAsync(string nickname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatService/Disconnect", ReplyAction="http://tempuri.org/IChatService/DisconnectResponse")]
-        bool Disconnect();
+        bool Disconnect(string nickname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatService/Disconnect", ReplyAction="http://tempuri.org/IChatService/DisconnectResponse")]
-        System.Threading.Tasks.Task<bool> DisconnectAsync();
+        System.Threading.Tasks.Task<bool> DisconnectAsync(string nickname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatService/GetChatHistory", ReplyAction="http://tempuri.org/IChatService/GetChatHistoryResponse")]
         WpfChatApp.ChatServices.Message[] GetChatHistory();
@@ -154,20 +154,20 @@ namespace WpfChatApp.ChatServices {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public bool Connect() {
-            return base.Channel.Connect();
+        public bool Connect(string nickname) {
+            return base.Channel.Connect(nickname);
         }
         
-        public System.Threading.Tasks.Task<bool> ConnectAsync() {
-            return base.Channel.ConnectAsync();
+        public System.Threading.Tasks.Task<bool> ConnectAsync(string nickname) {
+            return base.Channel.ConnectAsync(nickname);
         }
         
-        public bool Disconnect() {
-            return base.Channel.Disconnect();
+        public bool Disconnect(string nickname) {
+            return base.Channel.Disconnect(nickname);
         }
         
-        public System.Threading.Tasks.Task<bool> DisconnectAsync() {
-            return base.Channel.DisconnectAsync();
+        public System.Threading.Tasks.Task<bool> DisconnectAsync(string nickname) {
+            return base.Channel.DisconnectAsync(nickname);
         }
         
         public WpfChatApp.ChatServices.Message[] GetChatHistory() {

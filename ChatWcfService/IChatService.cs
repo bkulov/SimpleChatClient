@@ -9,10 +9,10 @@ namespace ChatWcfService
 	public interface IChatService
 	{
 		[OperationContract]
-		bool Connect();
+		bool Connect(string nickname);
 
 		[OperationContract]
-		bool Disconnect();
+		bool Disconnect(string nickname);
 
 		[OperationContract]
 		IEnumerable<Message> GetChatHistory();

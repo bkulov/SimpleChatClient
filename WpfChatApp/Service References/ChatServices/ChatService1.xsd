@@ -3,7 +3,9 @@
   <xs:import schemaLocation="http://localhost:56568/ChatService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ChatWcfService" />
   <xs:element name="Connect">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ConnectResponse">
@@ -15,7 +17,9 @@
   </xs:element>
   <xs:element name="Disconnect">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DisconnectResponse">

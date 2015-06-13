@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChatApp", "WpfChatApp\Wp
 		{B74CA345-D82C-4259-BD9F-62A499E48FCE} = {B74CA345-D82C-4259-BD9F-62A499E48FCE}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{F8866892-3966-42B6-A0E4-9920ECD5D2EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{669D5E6E-E520-4B6F-A905-5D3E573230CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669D5E6E-E520-4B6F-A905-5D3E573230CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669D5E6E-E520-4B6F-A905-5D3E573230CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8866892-3966-42B6-A0E4-9920ECD5D2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8866892-3966-42B6-A0E4-9920ECD5D2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8866892-3966-42B6-A0E4-9920ECD5D2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8866892-3966-42B6-A0E4-9920ECD5D2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
